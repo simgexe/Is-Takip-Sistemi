@@ -211,6 +211,7 @@
     <Content Include="Views\Yonetici\Index.cshtml" />
     <Content Include="Views\Yonetici\Ata.cshtml" />
     <Content Include="Views\Yonetici\Takip.cshtml" />
+    <Content Include="Views\Yonetici\Listele.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

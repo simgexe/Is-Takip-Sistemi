@@ -11,16 +11,16 @@
     @using (Html.BeginForm("Takip", "Yonetici", FormMethod.Post))
     {
         <div class="mb-3">
-            <label for="birimId" class="form-label">Birim Seçiniz</label>
+            
             <select class="form-select" name="selectPer" id="selectPer">
-                @foreach (var birim in ViewBag.birimler)
+             @foreach( var personel in ViewBag.personeller)
                 {
-                    <option value="@birim.birimId">@birim.birimAd</option>
+                    <option value="@personel.personelId"> @personel.personelAdSoyad</option>
                 }
-            </select>
+                </select>
         </div>
         <div class="mb-3">
-            <button class="btn btn-outline-primary" type="submit">Listele</button>
+            <button class="btn btn-outline-primary" type="submit">İşleri Listele</button>
         </div>
     }
 
