@@ -21,6 +21,8 @@ namespace IsTakipSistemi.Models
         public Nullable<System.DateTime> iletilenTarih { get; set; }
         public Nullable<System.DateTime> yapilanTarih { get; set; }
         public Nullable<int> isDurumId { get; set; }
+        public string isYorum { get; set; }
+        public Nullable<bool> isOkunma { get; set; }
     
         public virtual Durumlar Durumlar { get; set; }
         public virtual Personeller Personeller { get; set; }

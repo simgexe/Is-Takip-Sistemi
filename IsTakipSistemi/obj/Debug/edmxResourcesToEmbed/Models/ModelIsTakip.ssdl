@@ -25,6 +25,8 @@
     <Property Name="iletilenTarih" Type="datetime" />
     <Property Name="yapilanTarih" Type="datetime" />
     <Property Name="isDurumId" Type="int" />
+    <Property Name="isYorum" Type="nvarchar(max)" />
+    <Property Name="isOkunma" Type="bit" />
   </EntityType>
   <EntityType Name="Personeller">
     <Key>

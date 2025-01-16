@@ -61,6 +61,7 @@ namespace IsTakipSistemi.Controllers
             yeniIs.isPersonelId = secilenPersonelId;
             yeniIs.iletilenTarih = DateTime.Now;
             yeniIs.isDurumId = 1;
+            yeniIs.isOkunma = false;
 
             entity.Isler.Add(yeniIs);
             entity.SaveChanges();
@@ -115,6 +116,8 @@ namespace IsTakipSistemi.Controllers
                    
                     ViewBag.isler = isler;
                     ViewBag.personel = secilenPersonel;
+                    ViewBag.isSayisi = isler.Count();
+
                     return View();
                 }
                 catch(Exception)

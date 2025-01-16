@@ -30,6 +30,8 @@
           <Property Name="iletilenTarih" Type="datetime" />
           <Property Name="yapilanTarih" Type="datetime" />
           <Property Name="isDurumId" Type="int" />
+          <Property Name="isYorum" Type="nvarchar(max)" />
+          <Property Name="isOkunma" Type="bit" />
         </EntityType>
         <EntityType Name="Personeller">
           <Key>
@@ -164,6 +166,8 @@
           <Property Name="isDurumId" Type="Int32" />
           <NavigationProperty Name="Durumlar" Relationship="Self.FK_Isler_Durumlar" FromRole="Isler" ToRole="Durumlar" />
           <NavigationProperty Name="Personeller" Relationship="Self.FK_Isler_Personeller" FromRole="Isler" ToRole="Personeller" />
+          <Property Name="isYorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isOkunma" Type="Boolean" />
         </EntityType>
         <EntityType Name="Personeller">
           <Key>
@@ -294,6 +298,8 @@
           <EntitySetMapping Name="Isler">
             <EntityTypeMapping TypeName="IsTakipDBModel.Isler">
               <MappingFragment StoreEntitySet="Isler">
+                <ScalarProperty Name="isOkunma" ColumnName="isOkunma" />
+                <ScalarProperty Name="isYorum" ColumnName="isYorum" />
                 <ScalarProperty Name="isId" ColumnName="isId" />
                 <ScalarProperty Name="isBaslik" ColumnName="isBaslik" />
                 <ScalarProperty Name="isAciklama" ColumnName="isAciklama" />

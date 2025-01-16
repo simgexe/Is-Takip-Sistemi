@@ -20,6 +20,8 @@
     <EntitySetMapping Name="Isler">
       <EntityTypeMapping TypeName="IsTakipDBModel.Isler">
         <MappingFragment StoreEntitySet="Isler">
+          <ScalarProperty Name="isOkunma" ColumnName="isOkunma" />
+          <ScalarProperty Name="isYorum" ColumnName="isYorum" />
           <ScalarProperty Name="isId" ColumnName="isId" />
           <ScalarProperty Name="isBaslik" ColumnName="isBaslik" />
           <ScalarProperty Name="isAciklama" ColumnName="isAciklama" />

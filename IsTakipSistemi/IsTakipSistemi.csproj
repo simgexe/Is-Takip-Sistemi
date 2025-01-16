@@ -134,7 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CalisanController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\YoneticiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,6 +147,7 @@
     <Compile Include="Models\Durumlar.cs">
       <DependentUpon>ModelIsTakip.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\IsDurumModel.cs" />
     <Compile Include="Models\Isler.cs">
       <DependentUpon>ModelIsTakip.tt</DependentUpon>
     </Compile>
@@ -212,6 +215,10 @@
     <Content Include="Views\Yonetici\Ata.cshtml" />
     <Content Include="Views\Yonetici\Takip.cshtml" />
     <Content Include="Views\Yonetici\Listele.cshtml" />
+    <Content Include="Views\Shared\_LayoutCalisan.cshtml" />
+    <Content Include="Views\Calisan\Index.cshtml" />
+    <Content Include="Views\Calisan\Yap.cshtml" />
+    <Content Include="Views\Calisan\Takip.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -221,6 +228,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Logout\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

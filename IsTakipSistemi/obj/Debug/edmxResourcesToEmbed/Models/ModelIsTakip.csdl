@@ -29,6 +29,8 @@
     <Property Name="isDurumId" Type="Int32" />
     <NavigationProperty Name="Durumlar" Relationship="Self.FK_Isler_Durumlar" FromRole="Isler" ToRole="Durumlar" />
     <NavigationProperty Name="Personeller" Relationship="Self.FK_Isler_Personeller" FromRole="Isler" ToRole="Personeller" />
+    <Property Name="isYorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="isOkunma" Type="Boolean" />
   </EntityType>
   <EntityType Name="Personeller">
     <Key>

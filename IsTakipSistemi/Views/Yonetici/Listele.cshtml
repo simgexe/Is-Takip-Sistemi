@@ -7,21 +7,33 @@
     <div class=" mb-3">
         <h3>@ViewBag.personel.personelAdSoyad İşleri</h3>
     </div>
-    @foreach (var i in ViewBag.isler)
-    {
-        <div class=" card">
-            <div class="card-header bg-black text-center text-white">
-                @i.isBaslik
-            </div>
-            <div class=" card-body">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">İş Açıklama: @i.isAciklama</li>
-                    <li class="list-group-item">İletilen Tarih: @i.iletilenTarih.ToString("dd MMMM yyyy hh:mm")</li>
-                    <li class="list-group-item">Yapılan tarih: @(i.yapilanTarih!=null ? i.yapilanTarih.ToString("dd MMMM yyyy hh:mm") : "henüz girilmedi")</li>
-                    <li class="list-group-item">İş durumu: @i.Durumlar.durumAd</li>
+    @if(@ViewBag.isSayisi != 0)
+            {
+
+          
+              foreach (var i in ViewBag.isler)
+                   {
+                 <div class=" card">
+                   <div class="card-header bg-black text-center text-white">
+                       @i.isBaslik
+                    </div>
+                 <div class=" card-body">
+                     <ul class="list-group list-group-flush">
+                     <li class="list-group-item">İş Açıklama: @i.isAciklama</li>
+                     <li class="list-group-item">İletilen Tarih: @i.iletilenTarih.ToString("dd MMMM yyyy hh:mm")</li>
+                     <li class="list-group-item">Yapılan tarih: @i.yapilanTarih!=null ? i.yapilanTarih.ToString("dd MMMM yyyy hh:mm") : "henüz girilmedi")</li>
+                     <li class="list-group-item">İş durumu: @i.Durumlar.durumAd</li>
+                     <li class="list-group-item">İş Yorumu: @i.isYorum</li>
                 </ul>
             </div>
         </div>
     }
+}
+else
+            {
+<div class="alert-danger" role="alert">
+    Henüz atanmış bir işiniz yok.
+</div>
+            }
 </div>
 
