@@ -34,9 +34,11 @@ namespace IsTakipSistemi.Controllers
             if (yetkiTurId == 1)
             {
                 int birimId = Convert.ToInt32(Session["PersonelBirimId"]);
+                
                 var calisanlar = (from p in entity.Personeller where p.personelBirimId == birimId && p.personelYetkiTurId == 2 select p).ToList();
 
                 ViewBag.personeller = calisanlar;
+               
                 var birim = (from b in entity.Birimler where b.birimId == birimId select b).FirstOrDefault();
                 
                 ViewBag.birimAd = birim.birimAd; 
@@ -66,7 +68,7 @@ namespace IsTakipSistemi.Controllers
             entity.Isler.Add(yeniIs);
             entity.SaveChanges();
             
-            return RedirectToAction("Takip","Yönetici");
+            return RedirectToAction("Takip","Yonetici");
         }
         public ActionResult Takip()
         {
@@ -125,7 +127,6 @@ namespace IsTakipSistemi.Controllers
                     return RedirectToAction("Takip", "Yonetici");
                 }
 
-               
             }
             else
             {

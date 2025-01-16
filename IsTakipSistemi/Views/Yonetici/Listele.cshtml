@@ -21,7 +21,7 @@
                      <ul class="list-group list-group-flush">
                      <li class="list-group-item">İş Açıklama: @i.isAciklama</li>
                      <li class="list-group-item">İletilen Tarih: @i.iletilenTarih.ToString("dd MMMM yyyy hh:mm")</li>
-                     <li class="list-group-item">Yapılan tarih: @i.yapilanTarih!=null ? i.yapilanTarih.ToString("dd MMMM yyyy hh:mm") : "henüz girilmedi")</li>
+                     <li class="list-group-item">Yapılan tarih: @(i.yapilanTarih!=null ?  i.yapilanTarih.ToString("dd MMMM yyyy hh:mm") : "henüz girilmedi")</li>
                      <li class="list-group-item">İş durumu: @i.Durumlar.durumAd</li>
                      <li class="list-group-item">İş Yorumu: @i.isYorum</li>
                 </ul>
